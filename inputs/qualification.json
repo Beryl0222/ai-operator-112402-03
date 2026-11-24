@@ -1,0 +1,94 @@
+{
+  "channels": 160,
+  "frames": 352,
+  "window": 64,
+  "hop": 4,
+  "maxReads": 384,
+  "maxWorkBytes": 262144,
+  "epsilon": 1e-05,
+  "startAt": 224,
+  "profiles": [
+    {
+      "id": "A",
+      "from": 0,
+      "groups": 4,
+      "axisShift": 0,
+      "scale": 0.02
+    },
+    {
+      "id": "B",
+      "from": 224,
+      "groups": 5,
+      "axisShift": 17,
+      "scale": 0.04
+    }
+  ],
+  "calibration": {
+    "ordinary": [
+      1,
+      0,
+      1
+    ],
+    "sharedB": [
+      0.5,
+      0.25,
+      1
+    ],
+    "changedB": [
+      -0.25,
+      0.5,
+      2
+    ],
+    "changedEvery": 17
+  },
+  "repeat": {
+    "frame": 221,
+    "channels": [
+      1,
+      17,
+      28
+    ],
+    "revision": 2
+  },
+  "events": [
+    [
+      "open",
+      0
+    ],
+    [
+      "advance",
+      240
+    ],
+    [
+      "accept",
+      235
+    ],
+    [
+      "replay",
+      221,
+      2
+    ],
+    [
+      "advance",
+      351
+    ],
+    [
+      "read",
+      247
+    ],
+    [
+      "back",
+      235,
+      222,
+      17,
+      1.25
+    ],
+    [
+      "back",
+      235,
+      218,
+      2,
+      -0.75
+    ]
+  ]
+}
