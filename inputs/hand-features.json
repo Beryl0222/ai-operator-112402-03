@@ -1,0 +1,209 @@
+{
+  "joints": 32,
+  "basisWidth": 20,
+  "batches": 72,
+  "weights": [
+    1,
+    0.5,
+    2,
+    0.25
+  ],
+  "swaps": [
+    [
+      0,
+      1
+    ],
+    [
+      2,
+      3
+    ],
+    [
+      4,
+      5
+    ],
+    [
+      6,
+      7
+    ]
+  ],
+  "singularFloor": 3e-05,
+  "relativeTol": 5e-05,
+  "budget": 49152,
+  "rebuildsLimit": 12,
+  "masks": [
+    {
+      "drop": [
+        [
+          0,
+          4
+        ],
+        [
+          10,
+          14
+        ]
+      ],
+      "frames": [
+        0,
+        24
+      ]
+    },
+    {
+      "drop": [
+        [
+          1,
+          2
+        ],
+        [
+          11,
+          13
+        ]
+      ],
+      "frames": [
+        24,
+        48
+      ]
+    },
+    {
+      "drop": [
+        [
+          0,
+          30
+        ]
+      ],
+      "frames": [
+        48,
+        72
+      ]
+    }
+  ],
+  "groups": [
+    [
+      "pair",
+      0,
+      2
+    ],
+    [
+      "pair",
+      2,
+      4
+    ],
+    [
+      "pair",
+      4,
+      6
+    ],
+    [
+      "pair",
+      6,
+      8
+    ],
+    [
+      "pair",
+      8,
+      10
+    ],
+    [
+      "pair",
+      10,
+      12
+    ],
+    [
+      "pair",
+      12,
+      14
+    ],
+    [
+      "pair",
+      14,
+      16
+    ],
+    [
+      "pair",
+      16,
+      18
+    ],
+    [
+      "pair",
+      18,
+      20
+    ]
+  ],
+  "events": [
+    [
+      "batch",
+      "A",
+      "base",
+      0,
+      24
+    ],
+    [
+      "batch",
+      "B",
+      "rot90",
+      0,
+      24
+    ],
+    [
+      "apply-loss",
+      "A"
+    ],
+    [
+      "mirror",
+      "B"
+    ],
+    [
+      "drop",
+      "A",
+      [
+        5,
+        7
+      ]
+    ],
+    [
+      "batch",
+      "C",
+      "mirror",
+      48,
+      72
+    ],
+    [
+      "inspect",
+      "B"
+    ],
+    [
+      "adjoint",
+      "B"
+    ]
+  ],
+  "axisWeights": [
+    1,
+    1,
+    0.5,
+    0.5,
+    2,
+    2,
+    0.25,
+    0.25
+  ],
+  "calibration": {
+    "maskBits": 64,
+    "oldDictionary": 0,
+    "newDictionary": 1,
+    "strictGroups": [
+      0,
+      1
+    ],
+    "fallbackGroups": [
+      0,
+      2,
+      3
+    ],
+    "publicRotation": [
+      "base",
+      "rot90",
+      "rot180",
+      "rot270",
+      "mirror"
+    ]
+  }
+}
